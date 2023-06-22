@@ -4,7 +4,7 @@ const { Client, GatewayIntentBits, SlashCommandBuilder } = require('discord.js')
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
+  console.log(`Bot registrado como: ${client.user.tag}`);
 
   const roarCommand = new SlashCommandBuilder()
     .setName('roar')
@@ -14,7 +14,7 @@ client.once('ready', () => {
 
   client.guilds.cache.forEach((guild) => {
     guild.commands.create(data).then((command) => {
-      console.log(`Command registered: ${command.name}`);
+      console.log(`Comnado registrado: ${command.name}`);
     }).catch(console.error);
   });
 });
