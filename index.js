@@ -28,3 +28,5 @@ client.on('interactionCreate', (interaction) => {
 });
 
 client.login(token);
+
+console.log('Hola');
